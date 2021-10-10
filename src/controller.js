@@ -15,6 +15,11 @@ function getValues() {
     }
     badgeData.field = document.getElementById("field").value;
     badgeData.background.type = active_bg_option;
+    badgeData.organization_name = document.getElementById("org-name").value;
+    badgeData.field_name = document.getElementById("field").value;
+    badgeData.tagline = document.getElementById("tagline").value;
+    badgeData.org_name_color = document.getElementById("org-color").value;
+    badgeData.tagline_color = document.getElementById("tagline-color").value;
     // badgeData.organization_name = document.getElementById("")                                                            
     return badgeData;
 }
@@ -49,6 +54,8 @@ generate_btn.addEventListener("click", () => {
     bg_panel.innerHTML = '';
     bg_panel.append(badge_gen.outer_div);
 });
+
+
 
 
 

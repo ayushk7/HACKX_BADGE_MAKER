@@ -5,47 +5,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
 </head>
 
 <body>
-    <div class="form">
-        <label for="items">Shape</label>
-        <select id="shape_list">
-            <option value="square">square</option>
-            <option value="rhombus">rhombus</option>
-            <option value="circle">circle</option>
-            <option value="oval">oval</option>
-            <option value="triangle">triangle</option>
-            <option value="octagon">octagon</option>
-            <option value="star">star</option>
-        </select>
-        <select id="bg-selection-type">
-            <option value="bg-color">Color</option>
-            <option value="bg-gradient">Gradient</option>
-            <option value="bg-image">Image</option>
-        </select>
-        <div id="bg-color">
-            <input type="color" name="color" id="color_check" />
+    <div><h1>Badge Maker Made By CodeRiot</h1></div>
+    <div id="main-container">
+        <div class="form">
+            <label for="items" style="font-size: 20px; font-weight: bold">Shape</label>
+            <select id="shape_list">
+                <option value="square">Square</option>
+                <option value="rhombus">Rhombus</option>
+                <option value="circle">Circle</option>
+                <option value="oval">Oval</option>
+                <option value="triangle">Triangle</option>
+                <option value="octagon">Octagon</option>
+                <option value="star">Star</option>
+            </select>
+            <select id="bg-selection-type">
+                <option value="bg-color">Color</option>
+                <option value="bg-gradient">Gradient</option>
+                <option value="bg-image">Image</option>
+            </select>
+            <div id="bg-color">
+                <input type="color" name="color" id="color_check" value="#FFFFFF" />
+            </div>
+            <div id="bg-gradient" class="hidden">
+                <input type="color" name="color" id="gradient1" value="#E81111" />
+                <input type="color" name="color" id="gradient2" value="#115BE4" />
+            </div>
+            <div id="bg-image" class="hidden">
+                <input type="file" name="file" id="image_ip" />
+            </div>
+            <br>
+            <label for="items" style="font-size: 20px; font-weight: bold">Field</label>
+            <select id="field">
+                <option value="medical">Medical</option>
+                <option value="business">Business</option>
+                <!-- <option value="Medical">Medical</option> -->
+                <option value="coding">Coding</option>
+            </select>
+
+            <label for="org-name" style="font-size: 20px; font-weight: bold">Organization Name</label>
+            <input type="text" name="org-name" id="org-name" value="Organization Name"
+                placeholder="Enter Your Organization" />
+            <label for="org-color"></label>
+            <input type="color" name="org-color" id="org-color">
+            <br>
+
+            <label for="org-name" style="font-size: 20px; font-weight: bold">Tagline</label>
+            <input type="text" name="tag-name" id="tagline" placeholder="Enter Tagline" value="Your Tagline" tagline" />
+            <label for="tagline-color"></label>
+            <input type="color" name="tagline-color" id="tagline-color">
+            <button id="generate-badge-btn">Generate</button>
+            <!-- <label for=""></label> -->
         </div>
-        <div id="bg-gradient" class="hidden">
-            <input type="color" name="color" id="gradient1" />
-            <input type="color" name="color" id="gradient2" />
-        </div>
-        <div id="bg-image" class="hidden">
-            <input type="file" name="file" id="image_ip" />
-        </div>
-        <label for="items">Field</label>
-        <select id="field">
-            <option value="Education">Education</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Medical">Medical</option>
-            <option value="Coding">Coding</option>
-        </select>
-        <button id="generate-badge-btn">Generate</button>
+        <div id="badge-panel"></div>
     </div>
-    <div id="badge-panel"></div>
 </body>
 <!-- <script src="./src/model.js"></script> -->
 <script src="./src/controller.js" type="module"></script>

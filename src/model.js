@@ -1,8 +1,17 @@
+const Image_URLS = {
+    'medical': '../assets/Medical/1545429173.svg',
+    'business': '../assets/Business/1536016344.svg',
+    'coding': '../assets//Coding//programmer.svg'
+}
 export class Badge {
-    constructor({shape_name, background, field, organization_name, tagline, logo_image}) {
+    constructor({shape_name, background, field, organization_name, tagline, field_name, org_name_color, tagline_color}) {
         this.outer_div = document.createElement("div");
         this.setShape(shape_name);
         this.setBackground(background);
+        this.outer_div.innerHTML += `<div class="tag-line" style="color:${tagline_color} !important;"><h5>${tagline}</h5></div>`;
+        this.outer_div.innerHTML += `<img src="${Image_URLS[field_name]}" style="width:200px; height:200px"> </img>`;
+        this.outer_div.innerHTML += `<div class="org-name" style="margin: -10px 0 0 0; color:${org_name_color} !important;"><h4>${organization_name}</h4></div>`;
+        // this.outer_div.innerHTML = this.org_name;
     }
     setShape(shape_name) {
         shape_name = shape_name.toLowerCase();
@@ -36,6 +45,8 @@ export class Badge {
             this.outer_div.style.backgroundImage = `url(${background.image_url})`;
             this.outer_div.style.backgroundPosition = `center`;
             this.outer_div.style.backgroundSize = `cover`;
+            // this.outer_div.style.backgroundBlendMode = ``
+            // this.outer_div.style.filter= `brightness(60%)`;
             // console.log(this.outer_div.style.backgroundImage);
         }
     }
