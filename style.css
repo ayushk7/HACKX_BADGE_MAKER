@@ -10,25 +10,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* pad; */
     background-color: antiquewhite;
 }
 
 .badge{
     height: 300px;
     width: 300px;
-    background-color:aquamarine;
+    background-color:transparent;
 }
 .badge-circle{
     clip-path: circle(50% at 50% 50%);
 }
-/* .badge-triagle{
-    width: 0;
-    height: 0;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 300px solid red;
-} */
 .badge-oval{
     clip-path: ellipse(25% 40% at 50% 50%);
 }
@@ -38,9 +30,40 @@
 .badge-octagon{
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
-.badge-triagle{
+.badge-triangle{
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .badge-star{
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.hidden{
+    visibility: collapse;
+}
+.form{
+    height: 200px;
+    width: 15%;
+    display: flex;
+    align-content: center;
+    justify-content:space-around;
+    flex-direction: column;
+}
+#badge-panel{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    /* background-position: center; */
+    /* background-size:; */
+    /* bac */
+    /* background-repeat: no-repeat; */
+}
+body{
+    padding: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

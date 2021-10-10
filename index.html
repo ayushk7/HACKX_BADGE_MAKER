@@ -1,60 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="form">
-      <form>
         <label for="items">Shape</label>
-
-        <!-- The value for `for=""` and `id=""` has to be same. -->
-
         <select id="shape_list">
-          <option value="square">square</option>
-          <option value="rhombus">rhombus</option>
-          <option value="circle">circle</option>
-          <option value="oval">oval</option>
-          <option value="triagle">triagle</option>
-          <option value="octagon">octagon</option>
-          <option value="star">star</option>
+            <option value="square">square</option>
+            <option value="rhombus">rhombus</option>
+            <option value="circle">circle</option>
+            <option value="oval">oval</option>
+            <option value="triangle">triangle</option>
+            <option value="octagon">octagon</option>
+            <option value="star">star</option>
         </select>
-
-        <br />
-
-        <fieldset>
-          <input type="radio" id="age1" name="colorrad" value="30" />
-          <input type="color" name="color" id="color_check" />
-          <br />
-          <input type="radio" id="age2" name="age" value="60" />
-          <input type="color" name="color" id="gradient1" />
-          <input type="color" name="color" id="gradient2" />
-          <br />
-          <input type="radio" id="age3" name="age" value="100" />
-          <input type="file" name="file" id="image" />
-        </fieldset>
-
-        <br />
-        <br />
-
-        <label for="items">Feild</label>
-
-        <!-- The value for `for=""` and `id=""` has to be same. -->
-
+        <select id="bg-selection-type">
+            <option value="bg-color">Color</option>
+            <option value="bg-gradient">Gradient</option>
+            <option value="bg-image">Image</option>
+        </select>
+        <div id="bg-color">
+            <input type="color" name="color" id="color_check" />
+        </div>
+        <div id="bg-gradient" class="hidden">
+            <input type="color" name="color" id="gradient1" />
+            <input type="color" name="color" id="gradient2" />
+        </div>
+        <div id="bg-image" class="hidden">
+            <input type="file" name="file" id="image_ip" />
+        </div>
+        <label for="items">Field</label>
         <select id="field">
-          <option value="Education">Education</option>
-          <option value="Engineering">Engineering</option>
-          <option value="Medical">Medical</option>
-          <option value="Coding">Coding</option>
+            <option value="Education">Education</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Medical">Medical</option>
+            <option value="Coding">Coding</option>
         </select>
-        <br />
-
-        <input type="submit" value="Submit" />
-      </form>
+        <button id="generate-badge-btn">Generate</button>
     </div>
-  </body>
-  <script src="./src/model.js"></script>
+    <div id="badge-panel"></div>
+</body>
+<!-- <script src="./src/model.js"></script> -->
+<script src="./src/controller.js" type="module"></script>
+
 </html>
